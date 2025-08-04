@@ -48,4 +48,121 @@ Execution on Any Platform
 
 ---
 
+## 🔁 Overview
+
+| Term | Full Form                | What It Does                          |
+| ---- | ------------------------ | ------------------------------------- |
+| JVM  | Java Virtual Machine     | Runs Java bytecode                    |
+| JRE  | Java Runtime Environment | Provides environment to run Java apps |
+| JDK  | Java Development Kit     | Provides tools to develop Java apps   |
+
+---
+
+## 🧱 Step-by-Step Explanation
+
+### 1. **JVM (Java Virtual Machine)**
+
+🔹 **Role:** Runs Java **bytecode** (compiled `.class` files).
+🔹 **Platform-independent:** This is what makes Java "write once, run anywhere."
+🔹 **Does not understand Java code directly** – only bytecode.
+
+**Key Responsibilities:**
+
+* Loads `.class` files.
+* Verifies bytecode.
+* Executes code (using interpreter or JIT compiler).
+* Handles memory management (Garbage Collection).
+
+✅ You **must have JVM** to run any Java program.
+
+---
+
+### 2. **JRE (Java Runtime Environment)**
+
+🔹 **Contains:**
+
+* JVM
+* Core Java class libraries (like `java.lang`, `java.util`, etc.)
+* Other supporting files (like configuration files, resources)
+
+🔹 **Purpose:** Provides everything **needed to run Java applications**, but **not to develop** them.
+
+📦 Think of JRE as:
+
+```
+JRE = JVM + Java class libraries
+```
+
+---
+
+### 3. **JDK (Java Development Kit)**
+
+🔹 **Contains:**
+
+* JRE (and hence also JVM)
+* Development tools like:
+
+  * `javac` (Java compiler)
+  * `javadoc` (documentation generator)
+  * `jar` (packaging tool)
+  * Debugging tools
+
+🔹 **Purpose:** Used by developers to **write, compile, debug, and run** Java applications.
+
+📦 Think of JDK as:
+
+```
+JDK = JRE + Development Tools
+```
+
+### 🔧 When Developing Java Code:
+
+1. **Write Java Code**: Create a `.java` file.
+2. **Compile** with `javac` (from JDK): Converts `.java` → `.class` (bytecode).
+3. **Run** with `java` command:
+
+   * JVM loads the `.class` file.
+   * Bytecode is executed.
+
+**You need the JDK** to compile and run Java code.
+
+---
+
+### 🔍 When Only Running Java Applications:
+
+1. You download an app with `.class`.
+2. You run it using `java` (comes from JRE).
+3. The JVM runs the bytecode.
+
+**You only need the JRE** to run the app (not develop).
+
+---
+
+## 🎯 Summary Diagram
+
+```
+JDK
+├── JRE
+│   ├── JVM
+│   └── Libraries
+└── Development Tools (javac, jar, etc.)
+```
+
+---
+
+## ✅ Final Quick Comparison
+
+| Feature            | JVM | JRE | JDK |
+| ------------------ | --- | --- | --- |
+| Runs Java Code     | ✅   | ✅   | ✅   |
+| Compiles Java Code | ❌   | ❌   | ✅   |
+| Contains JVM       | ✅   | ✅   | ✅   |
+| Contains Compiler  | ❌   | ❌   | ✅   |
+| For Development    | ❌   | ❌   | ✅   |
+| For Running Apps   | ✅   | ✅   | ✅   |
+
+---
+
+
+
 
